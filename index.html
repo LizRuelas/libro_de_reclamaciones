@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	
+	<title>Libro de reclamaciones</title>
+</head>
+
+<body>
+	<div id="menu">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				 <a class="navbar-brand" href="https://www.culqi.com/" target="_blank"><img src="https://www.culqi.com/wp-content/uploads/2018/12/culqui-logo-blanco.svg"></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+
+			    <ul class="navbar-nav">
+
+			      <li class="nav-item">
+					    <a class="nav-link" target="_blank"  href="https://www.culqi.com/docs/">Desarrolladores</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" target="_blank" href="https://www.culqi.com/precios/">Precios</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" target="_blank" href="https://www.culqi.com/nosotros/">Nosotros</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" target="_blank" href="https://culqi.zendesk.com/hc/es">Ayuda</a>
+					  </li>
+			    </ul>
+			  </div>
+			</nav>
+
+		</div>
+	</div>
+
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-12">
+	        	
+	            <div class="well well-sm">
+	                <form class="form-horizontal" id="formulario" method="post">
+	                    <fieldset>
+	                        <div class="form-group text-center">
+	                            <div class="col-md-12 titulo_lr">
+		                            <div class="row">
+																	<div class="col-md-6">
+																			<label class="bold_text">LIBRO DE RECLAMACIONES</label>							    	
+																			<div>
+																			<label id="fecha"></label>
+																			</div>
+																		
+																	</div> <br>
+																	<div class="col-md-6">
+																			<label class="bold_text">HOJA DE RECLAMACIÓN</label>
+																			<div id="num_hoja">
+																				N° 000000001 - <label id="year"></label>
+																			</div>
+																	</div>
+															 </div>	                      
+	                            </div>
+													</div>
+													
+													<div class="form-group text-center">
+														<div class="col-md-12 ">
+															<div class="row">
+																<div class="col-md-4">
+																		<label class="bold_text">RAZÓN SOCIAL</label>							    	
+																		<div>
+																			<label>Compañia incubadora de soluciones moviles S.A</label>
+																		</div>
+																	
+																</div> <br>
+																<div class="col-md-4">
+																		<label class="bold_text">DIRECCIÓN DEL ESTABLECIMIENTO</label>
+																		<div>
+																			<label>Av. Victor Andrés Belaunde 147, Torre Real 2, San Isidro - LIMA </label>
+																		</div>
+																</div> <br>
+																<div class="col-md-4">
+																	<label class="bold_text">R.U.C</label>
+																	<div>
+																		<label>20555530090</label>
+																	</div>
+																</div>
+														 </div>	                      
+														</div>
+													</div>
+
+	                        <div class="col-md-12 title_lr">
+	                        	<label>1. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE</label>
+	                        </div><br>
+
+	                        <div class="form-group">
+	                            <div class="col-md-8">	                			
+	                                <input onkeypress='return validaLetras(event)' id="name" name="name" type="text" placeholder="Nombres y apellidos" class="form-control" >
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">	                            
+	                            <div class="col-md-8">
+	                                <input onkeypress='return validaNumericos(event)' id="dni" name="dni" type="text" placeholder="DNI / CE" class="form-control" maxlength="10" >
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">	                        
+	                            <div class="col-md-8">
+	                                <input id="domicilio" name="domicilio" type="text" placeholder="Domicilio" class="form-control" >
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <div class="col-md-8">
+	                                <input onkeypress='return validaNumericos(event)' id="phone" name="phone" type="text" placeholder="Teléfono" class="form-control" maxlength="9">
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <div class="col-md-8">
+																	<input id="email" name="email" type="text" placeholder="E-mail" class="form-control" >
+																	
+	                            </div>
+													</div>
+													
+													<div class="form-group">
+														<div class="col-md-8">
+															<input id="comercio" name="comercio" type="text" placeholder="Nombre de tu comercio afiliado a Culqi" class="form-control" >
+														</div>
+													</div>
+
+													<div class="form-group">
+														<div class="col-md-8">
+															<input onkeypress='return validaNumericos(event)' id="ruc" name="ruc" type="text" placeholder="Número de RUC afiliado a Culqi" class="form-control" maxlength="11"  >
+														</div>
+													</div>
+
+	                        <div class="form-group">                         
+	                            <div class="col-md-8">               
+	                                <input id="name_mp" name="name_mp" type="text" placeholder="Nombre de Padre o Madre" class="form-control" >
+	                                <small id="emailHelp" class="form-text text-muted">Para el caso de menores de edad.</small>
+	                            </div>
+	                        </div>
+
+	                        <div class="col-md-12 title_lr">
+	                        	<label>2. IDENTIFICACIÓN DEL BIEN CONTRATADO</label>
+	                        </div><br>
+
+	                        <div class="form-group">
+	                            <div class="col-md-12">
+	                            <div class="row">
+								    <div class="col-md-5">
+								    	<div class="form-check">
+										  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Producto" checked>
+										  <label class="form-check-label" for="exampleRadios1">
+										    Producto
+										  </label>
+										</div><br>
+										<div class="form-check">
+										  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Servicio">
+										  <label class="form-check-label" for="exampleRadios2">
+										    Servicio
+										  </label>
+										</div><br>
+
+								    </div> 
+								    <div class="col-md-7">
+								      <div class="form-group">
+			                            <div >
+			                            	<div class="input-group">
+											  <div class="input-group-prepend">
+											    <span class="input-group-text" id="">S/.</span>
+											  </div>
+											  <input onkeypress='return validaNumericos(event)' id="monto_reclamado" type="text" class="form-control" placeholder="Monto reclamado" >
+											</div> <br>
+			                               
+			                                <input id="description" type="text" placeholder="Descripción" class="form-control" >
+			                            </div>
+				                       </div>
+								    </div>
+							 	</div>
+	                      
+	                            </div>
+	                        </div>
+
+	                        <div class="col-md-12 title_lr">
+	                        	<label>3. DETALLE DE LA RECLAMACIÓN Y PEDIDO DEL CONSUMIDOR</label>
+	                        </div><br>
+	                  		<div class="form-group">
+	                  			
+	                  				<div class="col-md-8">
+	                            	<div class="form-check">
+									  <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="Reclamo" checked>
+									  <label class="form-check-label" for="exampleRadios3">
+									    Reclamo <a data-toggle="popover" data-trigger="hover" data-content="Disconformidad relacionada a los productos o servicios."><i class="far fa-question-circle"></i></a>
+									  </label>
+									</div><br>
+									<div class="form-check">
+									  <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios4" value="Queja">
+									  <label class="form-check-label" for="exampleRadios4">
+									    Queja <a data-toggle="popover" data-trigger="hover" data-content="Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público."><i class="far fa-question-circle"></i></a>
+									  </label>
+									</div><br>
+									
+	                            	</div>	               	                            
+	                        </div> 
+
+	                        <div class="form-group">
+							    <textarea placeholder="Detalle (Maximo 5000 caracteres)" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							</div>
+
+							<div class="form-group">
+							    <textarea placeholder="Pedido (Maximo 5000 caracteres)" class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+							</div>
+
+
+	                        <div class="form-group">
+	                            <div class="col-md-12 text-center">
+	                                
+	                            </div>
+													</div>
+													
+													<div class="form-group text-center">
+	                            <div class="col-md-12">
+		                            <div class="row">
+																	<div class="col-md-9">
+																		<div class="col-md-12">
+																			<div class="alert alert-secondary" role="alert">
+																				<div class="row vertical-align">
+																					<div class=" col-md-2 text-center">
+																						<i class="fa fa-info fa-2x"></i> 
+																					</div>
+																					<div class=" col-md-10">
+																						<strong>Importante:</strong> Al brindar mi correo electrónico, autorizo a que cualquier comunicación respecto al reclamo se realice a través del mismo.
+																					</div>
+																				</div>
+																			</div>      
+																		</div>
+																		
+																	</div> <br>
+																	<div class="col-md-3">
+																		<!-- <button id="enviar" type="submit" class="btn btn_enviar">Enviar</button> -->
+																		<button id="enviar" type="button" class="btn btn_enviar" data-toggle="modal" >
+																			Enviar
+																		</button>
+															 </div>	                      
+	                            </div>
+													</div>
+	                    </fieldset>
+	                </form>
+	            </div>
+        	</div>
+    	</div>
+	</div>
+		
+
+
+
+    <div id="footer">
+			<div class="container">
+
+				<h6>© Todos los derechos reservados</h6>
+
+			</div>
+		</div>
+	
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle" style="font-weight:bold">Constancia de Registro</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span style="color: white;" aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					<div class="modal-body">
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-md-12" style="font-size:smaller">
+													Estimado usuario imprima este documento como sustento de su solicitud
+												</div>
+											</div> <br>
+				
+											<div class="row">
+												<div class="col-md-12 title_modal">
+													1. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE
+												</div>
+												</div><br>
+											<div class="row">
+												<div class="col-md-6 ml-auto">
+													Nombres y apellidos:
+													<p id="dato_name"></p>
+													DNI/CE:
+													<p id="dato_dni"></p>
+													Domicilio:
+													<p id="dato_domicilio"></p>
+													Teléfono:
+													<p id="dato_phone"></p>
+												</div>
+												<div class="col-md-6 ml-auto">
+													Email:
+													<p id="dato_email"></p>
+													Nombre del comercio:
+													<p id="dato_comercio"></p>
+													Número de RUC:
+													<p id="dato_ruc"></p>
+													Nombre de padre o madre:
+													<p id="dato_name_mp"></p>
+												</div>
+											</div>
+		
+											<div class="row">
+												<div class="col-md-6 ml-auto ">
+													<span class="title_modal">2. IDENTIFICACIÓN DEL BIEN CONTRATADO:</span>
+													<p id="dato_bien"></p>
+													Monto Reclamado: <br>
+												  <span>S/. </span><span id="dato_monto_reclamado"></span><br><br>
+													Descripción:
+													<p id="dato_description"></p>
+												</div>
+												<div class="col-md-6 ml-auto ">
+													<span class="title_modal">3. DETALLE DE LA RECLAMACIÓN Y PEDIDO DEL CONSUMIDOR:</span>
+													<p id="dato_reclamo_queja"></p>
+													Detalle:
+													<p id="dato_detalle"></p>
+													Pedido:
+													<p id="dato_pedido"></p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													OBSERVACIONES DEL PROVEEDOR <br>
+													<textarea  disabled style="width:100%">-</textarea>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12" style="font-size:smaller">
+													* Le informamos que la respuesta  a su reclamo tendrás las acciones adoptadas
+													y será remitida al correo electronico o a los teléfonos de contacto registrados.
+												</div>
+											</div>
+		
+											</div>
+						</div>
+					<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+							<button id="aceptar" type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover" data-content="Al aceptar usted está conforme con lo especificado en el formato." >Aceptar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	          
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<script>
+		$(document).ready(function(){
+		  $('[data-toggle="popover"]').popover();   
+		});
+	</script>
+	<script type="text/javascript">					
+		var f = new Date();
+		document.getElementById('year').innerHTML = f.getFullYear();
+		document.getElementById('fecha').innerHTML = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+		
+	</script>
+	<script type="text/javascript" src="js/app.js" ></script>
+
+	<script type="text/javascript">
+		function validaNumericos(event) {
+			if(event.charCode >= 48 && event.charCode <= 57 || event.charCode == 46 ){
+				return true;
+			}
+			return false;        
+		}
+
+		function validaLetras(event) {
+			if(event.charCode >= 65 && event.charCode <= 90 || event.charCode == 32 || event.charCode >= 97 && event.charCode <= 122 ){
+				return true;
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>

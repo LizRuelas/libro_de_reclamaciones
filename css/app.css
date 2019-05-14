@@ -1,0 +1,84 @@
+body {
+	font-family: 'Khula', sans-serif;
+}
+
+#name {
+	outline:0;
+}
+
+#menu {
+	padding: 20px;
+	margin-bottom: 30px;
+	background-color: transparent;
+	background-image: linear-gradient(180deg, #2B256D 0%, #9C9BDD 155%);
+	color: white;
+}
+
+#footer {
+	padding: 12px;
+	background-color: transparent;
+	background-image: linear-gradient(180deg, #2B256D 0%, #9C9BDD 155%);
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+	font-weight: bold;
+}
+
+#menu img {
+	width: 100px;
+	height: 37px;
+}
+
+.nav-link:hover {
+	color: white !important;
+}
+
+.navbar-nav:hover {
+	color: white !important;
+}
+.navbar-light:hover {
+	color: white !important;
+}
+
+.titulo_lr {
+	border-bottom: 1px solid black;
+	margin-bottom: 30px;
+
+}
+
+.title_lr {
+	background-color: #2B256D;
+	padding-top: 15px;
+	font-weight: bold;
+	color: white;
+}
+
+.btn_enviar {
+	background-color: #2B256D;
+	color: white;
+}
+
+.bold_text {
+	font-weight: bold;
+}
+
+#aceptar {
+	background-color: #2B256D;
+	color: white;
+	border-color: white;
+}
+
+.modal-header {
+	background-color: transparent;
+	background-image: linear-gradient(180deg, #2B256D 0%, #9C9BDD 155%);
+	color: white;
+	padding: 10px;
+	padding-left: 33px;
+}
+
+.title_modal {
+	font-weight: bold;
+}
+

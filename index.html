@@ -52,6 +52,7 @@
 	        	
 	            <div class="well well-sm">
 	                <form class="form-horizontal" id="formulario" method="post">
+	                	<input type='hidden' name='accion' id='accion' value='insert'>
 	                    <fieldset>
 	                        <div class="form-group text-center">
 	                            <div class="col-md-12 titulo_lr">
@@ -66,7 +67,7 @@
 																	<div class="col-md-6">
 																			<label class="bold_text">HOJA DE RECLAMACIÓN</label>
 																			<div id="num_hoja">
-																				N° 000000001 - <label id="year"></label>
+																				N° <label id="correlativo"></label> - <label id="year"></label>
 																			</div>
 																	</div>
 															 </div>	                      
@@ -182,10 +183,10 @@
 											  <div class="input-group-prepend">
 											    <span class="input-group-text" id="">S/.</span>
 											  </div>
-											  <input onkeypress='return validaNumericos(event)' id="monto_reclamado" type="text" class="form-control" placeholder="Monto reclamado" >
+											  <input onkeypress='return validaNumericos(event)' name="monto_reclamado" id="monto_reclamado" type="text" class="form-control" placeholder="Monto reclamado" >
 											</div> <br>
 			                               
-			                                <input id="description" type="text" placeholder="Descripción" class="form-control" >
+			                                <input id="description" name="description" type="text" placeholder="Descripción" class="form-control" >
 			                            </div>
 				                       </div>
 								    </div>
@@ -217,11 +218,11 @@
 	                        </div> 
 
 	                        <div class="form-group">
-							    <textarea placeholder="Detalle (Maximo 5000 caracteres)" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							    <textarea placeholder="Detalle (Maximo 5000 caracteres)" class="form-control" name="exampleFormControlTextarea1" id="exampleFormControlTextarea1" rows="3"></textarea>
 							</div>
 
 							<div class="form-group">
-							    <textarea placeholder="Pedido (Maximo 5000 caracteres)" class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+							    <textarea placeholder="Pedido (Maximo 5000 caracteres)" class="form-control" name="exampleFormControlTextarea2" id="exampleFormControlTextarea2" rows="3"></textarea>
 							</div>
 
 
@@ -362,8 +363,8 @@
 		</div>
 
 
-	          
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	
@@ -378,6 +379,7 @@
 		document.getElementById('fecha').innerHTML = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
 		
 	</script>
+	<script src="js/folio_reclamaciones.js"></script>
 	<script type="text/javascript" src="js/app.js" ></script>
 
 	<script type="text/javascript">
